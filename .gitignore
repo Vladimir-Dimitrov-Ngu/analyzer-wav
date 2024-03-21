@@ -1,3 +1,11 @@
+# My files
+/data/*
+/data/sliced/
+/mel-spectrogram
+!/mel-spectrogram/example
+!/data/sliced/example/
+!/data/example.wav
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
