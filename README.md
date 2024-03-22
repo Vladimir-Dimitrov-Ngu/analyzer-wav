@@ -20,14 +20,7 @@ Open the terminal and execute the command:
 bash process_audio.sh
 ```
 
-## Functionality:
-
-- Audio File Splitting. The file will be divided into required segments for analysis.
-- Noise Type Specification. Choose between pink or white noise.
-- Dataset Creation. Analysis results will be utilized to generate a dataset.
-- Noise Detection Neural Network. Utilizes a trained neural network capable of accurately detecting various types of noise within the audio file.
-
-### Docker 
+## Docker 
 Build docker image:
 ```bash
 docker build --build-arg ENVIRONMENT=<your_environment> -t <image_name>:latest .
@@ -42,6 +35,13 @@ Interactive format:
 ```bash
 docker run -it <image_name> bash    
 ```
+
+## Functionality:
+
+- Audio File Splitting. The file will be divided into required segments for analysis.
+- Noise Type Specification. Choose between pink or white noise.
+- Dataset Creation. Analysis results will be utilized to generate a dataset.
+- Noise Detection Neural Network. Utilizes a trained neural network capable of accurately detecting various types of noise within the audio file.
 
 ## Stack
 1. Programming Languages: Bash scripting for automation.
