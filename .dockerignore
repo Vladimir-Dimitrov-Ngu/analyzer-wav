@@ -1,0 +1,16 @@
+# My files
+/data/Galitskiy.wav
+/data/Kuji_podcast_150.wav
+/data/Medusa.wav
+/ml/noise_classifier_architecture.pdf
+/data/sliced/Kuji
+/data/sliced/Galitskiy
+/data/sliced/Medusa
+/mel-spectrogram/Galitskiy
+/mel-spectrogram/Kuji
+/mel-spectrogram/Medusa
+/mel-spectrogram/test
+/mel-spectrogram/train
+!/mel-spectrogram/example
+!/data/sliced/example
+!/data/example.wav

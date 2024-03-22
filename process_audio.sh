@@ -15,3 +15,5 @@ python3 scripts/wav_to_mel.py "$SLICED_FOLDER" "$MEL_PINK_NOISE_FOLDER" --add_pi
 
 # Command to create train and test folders
 python3 scripts/create_dataset.py    
+
+echo "Everything is ready"

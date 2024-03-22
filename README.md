@@ -27,6 +27,22 @@ bash process_audio.sh
 - Dataset Creation. Analysis results will be utilized to generate a dataset.
 - Noise Detection Neural Network. Utilizes a trained neural network capable of accurately detecting various types of noise within the audio file.
 
+### Docker 
+Build docker image:
+```bash
+docker build --build-arg ENVIRONMENT=<your_environment> -t <image_name>:latest .
+```
+
+Run docker container:
+```bash
+docker run -it <image_name>
+```
+
+Interactive format:
+```bash
+docker run -it <image_name> bash    
+```
+
 ## Stack
 1. Programming Languages: Bash scripting for automation.
 2. Neural Network Framework: Python with PyTorch for implementing and training the neural network.
