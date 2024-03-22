@@ -2,13 +2,19 @@
 
 ## Contents
 - [ WAV analyzer with Noise Detection Neural Network](#)
+
   - [File Preparation](#file-preparation)
+
   - [Setting Parameters](#setting-parameters)
   - [Running the Analysis](#running-the-analysis)
+
   - [Docker](#docker)
+
   - [Functionality](#functionality)
   - [Stack](#stack)
+
   - [Contributing](#contributing)
+  
   - [Authors](#authors)
 
 
