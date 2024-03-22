@@ -1,5 +1,17 @@
 # WAV analyzer with Noise Detection Neural Network
 
+## Contents
+- [ WAV analyzer with Noise Detection Neural Network](#)
+  - [File Preparation](#file-preparation)
+  - [Setting Parameters](#setting-parameters)
+  - [Running the Analysis](#running-the-analysis)
+  - [Docker](#docker)
+  - [Functionality](#functionality)
+  - [Stack](#stack)
+  - [Contributing](#contributing)
+  - [Authors](#authors)
+
+
 ## File Preparation
 
 Place your WAV file in the following directory:
@@ -36,7 +48,7 @@ Interactive format:
 docker run -it <image_name> bash    
 ```
 
-## Functionality:
+## Functionality
 
 - Audio File Splitting. The file will be divided into required segments for analysis.
 - Noise Type Specification. Choose between pink or white noise.
