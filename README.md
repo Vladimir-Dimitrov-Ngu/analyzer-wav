@@ -1,6 +1,6 @@
 # WAV analyzer with Noise Detection Neural Network
 
-## Project Stracture
+## Project Structure
 ```none
 ├── data (wav dataset)
 │   ├── Galitskiy.wav
