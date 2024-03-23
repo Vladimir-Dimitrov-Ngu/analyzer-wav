@@ -13,18 +13,18 @@ def create_dataset(path_to_dataset: str = "./mel-spectrogram") -> None:
     Returns:
         None
     """
-    train_path = os.path.join(path_to_dataset, 'train')
-    test_path = os.path.join(path_to_dataset, 'test')
+    train_path = os.path.join(path_to_dataset, "train")
+    test_path = os.path.join(path_to_dataset, "test")
     if not os.path.exists(train_path):
         os.mkdir(train_path)
-        os.mkdir(os.path.join(train_path, 'True'))
-        os.mkdir(os.path.join(train_path, 'Noise'))
-        os.mkdir(os.path.join(train_path, 'Pink'))
+        os.mkdir(os.path.join(train_path, "True"))
+        os.mkdir(os.path.join(train_path, "Noise"))
+        os.mkdir(os.path.join(train_path, "Pink"))
     if not os.path.exists(test_path):
         os.mkdir(test_path)
-        os.mkdir(os.path.join(test_path, 'True'))
-        os.mkdir(os.path.join(test_path, 'Noise'))
-        os.mkdir(os.path.join(test_path, 'Pink'))
+        os.mkdir(os.path.join(test_path, "True"))
+        os.mkdir(os.path.join(test_path, "Noise"))
+        os.mkdir(os.path.join(test_path, "Pink"))
 
     folders = os.listdir(path_to_dataset)
     folders.remove("train")
@@ -47,5 +47,6 @@ def create_dataset(path_to_dataset: str = "./mel-spectrogram") -> None:
                 except:
                     continue
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     Fire(create_dataset)

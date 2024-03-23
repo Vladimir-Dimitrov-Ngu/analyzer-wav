@@ -3,38 +3,7 @@ import librosa
 import librosa.display
 import matplotlib.pyplot as plt
 import numpy as np
-
-
-def generate_formant_like_noise(
-    duration, sampling_rate, num_formants=3, formant_freqs=None, formant_bw=None
-):
-    t = np.linspace(0, duration, int(duration * sampling_rate), endpoint=False)
-    signal = np.zeros_like(t)
-    if formant_freqs is None:
-        formant_freqs = [500, 1500, 2500]
-    if formant_bw is None:
-        formant_bw = [80, 80, 80]
-
-    for freq, bw in zip(formant_freqs, formant_bw):
-        formant_noise = np.random.normal(0, 1, len(t))
-        formant_noise = (
-            np.convolve(formant_noise, [1] * int(bw * sampling_rate), mode="same")
-            / sampling_rate
-        )
-        signal += np.sin(2 * np.pi * freq * t) * formant_noise
-
-    return signal / np.max(np.abs(signal))
-
-
-def generate_pink_noise(duration, sampling_rate):
-    num_samples = int(duration * sampling_rate)
-    pink_noise = np.zeros(num_samples)
-    b = [0.049922035, -0.095993537, 0.050612699, -0.004408786]
-    a = [1, -2.494956002, 2.017265875, -0.522189400]
-    pink_noise = np.random.randn(num_samples)
-    pink_noise = np.convolve(pink_noise, b)
-    pink_noise = np.convolve(pink_noise, a)
-    return pink_noise[:num_samples]
+from generate_noise import generate_formant_like_noise, generate_pink_noise
 
 
 def plot_and_save_mel_spectrogram(
@@ -44,7 +13,7 @@ def plot_and_save_mel_spectrogram(
     add_white_noise: bool = False,
     noise_level: int = 0.4,
     add_formant_noise: bool = False,
-    num_formants=3,
+    num_formants: int = 3,
     formant_freqs: int | None = None,
     formant_bw: int | None = None,
     add_pink_noise: bool = False,
