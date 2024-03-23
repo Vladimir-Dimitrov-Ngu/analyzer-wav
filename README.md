@@ -1,5 +1,58 @@
 # WAV analyzer with Noise Detection Neural Network
 
+## Project Stracture
+```none
+├── data (wav dataset)
+│   ├── Galitskiy.wav
+│   ├── Kuji_Podcast_150.wav
+│   ├── Medusa.wav
+│   ├── denoising
+│   │   ├── Pink (denoised audio files with pink noise)
+│   │   └── White (denoised audio files with white noise)
+│   ├── noise
+│   │   ├── Pink (audio files with pink noise)
+│   │   └── White (audio files with white noise)
+│   └── sliced
+│       └── example
+│           ├── example.wav
+│           ├── mel-spectrogram
+│           │   ├── example
+│           │   │   ├── Pink_Noise (mel spectrograms of audio with pink noise)
+│           │   │   ├── True (mel spectrograms of original audio)
+│           │   │   └── White_Noise (mel spectrograms of audio with white noise)
+│           │   ├── test
+│           │   │   ├── Noise (mel spectrograms of test set with noise)
+│           │   │   ├── Pink (mel spectrograms of test set with pink noise)
+│           │   │   ├── Pink_Noise (mel spectrograms of test set with pink noise)
+│           │   │   ├── True (mel spectrograms of test set original audio)
+│           │   │   └── White_Noise (mel spectrograms of test set with white noise)
+│           │   └── train
+│           │       ├── Noise (mel spectrograms of training set with noise)
+│           │       ├── Pink (mel spectrograms of training set with pink noise)
+│           │       └── True (mel spectrograms of training set original audio)
+│   ├── ml
+│   │   ├── cnn.ipynb (Jupyter notebook for CNN model)
+│   │   └── noise_classifier_architecture.pdf (PDF file with noise classifier architecture)
+│   ├── scripts
+│   │   ├── add_noise.py (script to add noise to audio files)
+│   │   ├── create_dataset.py (script to create dataset)
+│   │   ├── denoising.py (script for denoising audio files)
+│   │   ├── generate_noise.py (script to generate noise)
+│   │   ├── mel_spectorgram.py (script to generate mel spectrograms)
+│   │   ├── split_wav.py (script to split audio files)
+│   │   └── wav_to_mel.py (script to convert wav to mel spectrogram)
+│   ├── poetry.lock (Poetry lock file)
+│   ├── process_audio.sh (Bash script to run the analysis)
+│   ├── pyproject.toml (Poetry project file)
+│   ├── input_variables.txt (file to specify input parameters)
+│   ├── .dockerignore (Docker ignore file)
+│   ├── .flake8 (Flake8 configuration file)
+│   ├── .pre-commit-config.yaml (Pre-commit configuration file)
+│   ├── Dockerfile (Docker file)
+│   ├── LICENSE (License file)
+│   ├── README.md (Project README file)
+│   └── contributing.md (Contributing guidelines)
+```
 ## Contents
 - [ WAV analyzer with Noise Detection Neural Network](#)
 
