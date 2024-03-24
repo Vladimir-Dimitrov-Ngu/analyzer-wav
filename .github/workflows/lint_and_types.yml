@@ -34,6 +34,14 @@ jobs:
       run: |
         poetry add black
 
+    - name: Add pyright
+      run: |
+        poetry add pyright
+
+    - name: Add ruff
+      run: |
+        poetry add ruff
+
     - name: Check code formatting by black
       run: |
         poetry run black . --check
