@@ -30,6 +30,10 @@ jobs:
       run: |
         poetry install
 
+    - name: Add black
+      run: |
+        poetry add black
+
     - name: Check code formatting by black
       run: |
         poetry run black . --check
