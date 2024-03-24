@@ -44,7 +44,8 @@ def create_dataset(path_to_dataset: str = "./mel-spectrogram") -> None:
                 copy_path = os.path.join(train_path, sub_folder)
                 try:
                     shutil.copytree(sub_folder_path, copy_path, dirs_exist_ok=True)
-                except:
+                except Exception as e:
+                    print(f'Exception: {e}')
                     continue
 
 
